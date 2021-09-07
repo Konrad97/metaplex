@@ -487,7 +487,7 @@ export function Notifications() {
       content={content}
       trigger="click"
     >
-      <h1 className="title">M</h1>
+      <img className="title" src="favicon-32x32.png" width="32" height="32"/>
     </Popover>
   );
 
