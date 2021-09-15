@@ -53,13 +53,18 @@ const DefaultActions = ({ vertical = false }: { vertical?: boolean }) => {
       }}
     >
       <Link to={`/`}>
-        <Button className="app-btn">Explore</Button>
+        <Button className="app-btn">Auctions</Button>
       </Link>
       <Link to={`/artworks`}>
         <Button className="app-btn">
           {connected ? 'My Dreams' : 'Dreams'}
         </Button>
       </Link>
+      <a href="https://digitaleyes.market/collections/SOLdreams" target="_blank">
+            <Button className="app-btn">
+              Marketplace
+            </Button>
+          </a>
       {/*<Link to={`/artists`}>
         <Button className="app-btn">Creators</Button>
     </Link>*/}
