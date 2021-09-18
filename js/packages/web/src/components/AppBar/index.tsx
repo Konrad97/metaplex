@@ -87,7 +87,7 @@ const MetaplexMenu = () => {
             <Menu>
               <Menu.Item>
                 <Link to={`/`}>
-                  <Button className="app-btn">Explore</Button>
+                  <Button className="app-btn">Auctions</Button>
                 </Link>
               </Menu.Item>
               <Menu.Item>
@@ -96,6 +96,13 @@ const MetaplexMenu = () => {
                   {connected ? 'My Dreams' : 'Dreams'}
                   </Button>
                 </Link>
+              </Menu.Item>
+              <Menu.Item>
+                  <a href="https://digitaleyes.market/collections/SOLdreams" target="_blank">
+                <Button className="app-btn">
+                  Marketplace
+                </Button>
+              </a>
               </Menu.Item>
               {/*<Menu.Item>
                 <Link to={`/artists`}>
