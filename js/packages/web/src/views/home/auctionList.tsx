@@ -36,6 +36,8 @@ export const AuctionListView = () => {
 
   // Check if the auction is primary sale or not
   const checkPrimarySale = (auc: AuctionView) => {
+    // TODO Hotfix, remove!!
+    return true
     var flag = 0;
     auc.items.forEach(i => {
       i.forEach(j => {
