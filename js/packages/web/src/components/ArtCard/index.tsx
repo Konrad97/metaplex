@@ -115,7 +115,7 @@ export const ArtCard = (props: ArtCardProps) => {
   );
 
   return art.creators?.find(c => !c.verified) ? (
-    <Badge.Ribbon text="Unverified">{card}</Badge.Ribbon>
+  <></>  
   ) : (
     card
   );
