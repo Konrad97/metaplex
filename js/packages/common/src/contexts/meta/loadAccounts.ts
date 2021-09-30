@@ -37,7 +37,7 @@ import { ParsedAccount } from '../accounts/types';
 import { getEmptyMetaState } from './getEmptyMetaState';
 import { getMultipleAccounts } from '../accounts/getMultipleAccounts';
 import { getProgramAccounts } from './web3';
-import { createPipelineExecutor } from './createPipelineExecutor';
+import { createPipelineExecutor } from '../../utils/createPipelineExecutor';
 
 export const USE_SPEED_RUN = false;
 const WHITELISTED_METADATA = ['98vYFjBYS9TguUMWQRPjy2SZuxKuUMcqR4vnQiLjZbte'];
@@ -400,7 +400,6 @@ const pullMetadataByCreators = (
   const forEachAccount = processingAccounts(setter);
 
   const additionalPromises: Promise<void>[] = [];
-  for (const creator of whitelistedCreators) {
     for (let i = 0; i < MAX_CREATOR_LIMIT; i++) {
       const promise = getProgramAccounts(connection, METADATA_PROGRAM_ID, {
         filters: [
@@ -420,14 +419,14 @@ const pullMetadataByCreators = (
                 1 + // whether or not there is a creators vec
                 4 + // creators vec length
                 i * MAX_CREATOR_LEN,
-              bytes: creator.info.address,
+              bytes: "GWHxJW8FU6Zb8GejvjJmLpAJzmMLXmRkrwm9WjFg4GtA",
             },
           },
         ],
       }).then(forEachAccount(processMetaData));
       additionalPromises.push(promise);
     }
-  }
+  
 
   return Promise.all(additionalPromises);
 };

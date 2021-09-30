@@ -39,9 +39,7 @@ export const AuctionListView = () => {
 
   // Check if the auction is primary sale or not
   const checkPrimarySale = (auc: AuctionView) => {
-    // TODO Hotfix, remove!!
-    return false
-    auc.auction.account
+    return false;
     var flag = 0;
     auc.items.forEach(i => {
       i.forEach(j => {
@@ -127,7 +125,7 @@ export const AuctionListView = () => {
               </Link>
             );
           })
-        : [...Array(10)].map((_, idx) => <CardLoader key={idx} />)}
+        : []}
     </Masonry>
   );
   const endedAuctions = (
@@ -149,7 +147,7 @@ export const AuctionListView = () => {
               </Link>
             );
           })
-        : [...Array(10)].map((_, idx) => <CardLoader key={idx} />)}
+        : []}
     </Masonry>
   );
 

@@ -376,6 +376,7 @@ async function buildSafetyDepositArray(
   if (!wallet.publicKey) throw new WalletNotConnectedError();
 
   const safetyDepositTemplates: SafetyDepositInstructionTemplate[] = [];
+  console.log("Safety Deposits: " + JSON.stringify(safetyDeposits))
   safetyDeposits.forEach((s, i) => {
     const maxAmount = [...s.amountRanges.map(a => a.amount)]
       .sort()

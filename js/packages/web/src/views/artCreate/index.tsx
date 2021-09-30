@@ -42,6 +42,7 @@ import { cleanName, getLast } from '../../utils/utils';
 import { AmountLabel } from '../../components/AmountLabel';
 import useWindowDimensions from '../../utils/layout';
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
+import { LoadingOutlined } from '@ant-design/icons';
 
 const { Step } = Steps;
 const { Dragger } = Upload;
@@ -141,7 +142,7 @@ export const ArtCreateView = () => {
               style={{
                 width: 'fit-content',
                 margin: '0 auto 30px auto',
-                overflowX: 'auto',
+                overflowX: 'visible',
                 maxWidth: '100%',
               }}
             >
@@ -921,11 +922,10 @@ const RoyaltiesStep = (props: {
           style={{ padding: 10, marginBottom: 10 }}
         >
           <span
+            className="metaplex-icon-circle"
             style={{
-              color: 'white',
               fontSize: 25,
               padding: '0px 8px 3px 8px',
-              background: 'rgb(57, 57, 57)',
               borderRadius: '50%',
               marginRight: 5,
               verticalAlign: 'middle',
@@ -934,8 +934,8 @@ const RoyaltiesStep = (props: {
             +
           </span>
           <span
+            className="metaplex-btn-label"
             style={{
-              color: 'rgba(255, 255, 255, 0.7)',
               verticalAlign: 'middle',
               lineHeight: 1,
             }}
@@ -1087,7 +1087,7 @@ const LaunchStep = (props: {
           {cost ? (
             <AmountLabel title="Cost to Create" amount={cost.toFixed(5)} />
           ) : (
-            <Spin />
+            <Spin indicator={<LoadingOutlined />} />
           )}
         </Col>
       </Row>
@@ -1135,7 +1135,7 @@ const WaitingStep = (props: {
         alignItems: 'center',
       }}
     >
-      <Spin size="large" />
+      <Spin size="large" indicator={<LoadingOutlined />} />
       <div className="waiting-title">
         Your creation is being uploaded to the decentralized web...
       </div>

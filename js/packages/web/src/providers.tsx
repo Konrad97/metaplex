@@ -17,7 +17,7 @@ export const Providers: FC = ({ children }) => {
           <AccountsProvider>
             <CoingeckoProvider>
               <StoreProvider
-                ownerAddress={process.env.NEXT_PUBLIC_STORE_OWNER_ADDRESS}
+              ownerAddress="GWHxJW8FU6Zb8GejvjJmLpAJzmMLXmRkrwm9WjFg4GtA"
                 storeAddress={process.env.NEXT_PUBLIC_STORE_ADDRESS}
               >
                 <MetaProvider>
