@@ -265,10 +265,6 @@ export const AuctionCard = ({
   ) {
     return <></>;
   }*/
-
-  console.log("HideDefaultAction: " + JSON.stringify(hideDefaultAction))
-  console.log("Wallet connected: " + JSON.stringify(wallet.connected))
-  console.log("Auction view ended: " + JSON.stringify(auctionView.auction.info.ended()))
   return (
     <div className="auction-container" style={style}>
       <Col>
@@ -350,7 +346,7 @@ export const AuctionCard = ({
               {loading ||
               auctionView.items.find(i => i.find(it => !it.metadata)) ||
               !myPayingAccount ? (
-                <Spin indicator={<LoadingOutlined />} />
+                <Spin size="large" indicator={<LoadingOutlined />} />
               ) : eligibleForAnything ? (
                 `Redeem bid`
               ) : (
@@ -386,7 +382,7 @@ export const AuctionCard = ({
               style={{ marginTop: 20 }}
             >
               {loading ? (
-                <Spin indicator={<LoadingOutlined />} />
+                <Spin size="large" indicator={<LoadingOutlined />} />
               ) : (
                 'Start auction'
               )}
@@ -401,7 +397,7 @@ export const AuctionCard = ({
               style={{ marginTop: 20 }}
             >
               {loading ? (
-                <Spin indicator={<LoadingOutlined />} />
+                <Spin size="large" indicator={<LoadingOutlined />} />
               ) : auctionView.isInstantSale ? (
                 !isAuctionManagerAuthorityNotWalletOwner ? (
                   'Claim item'
@@ -710,7 +706,7 @@ export const AuctionCard = ({
                     }
                   >
                     {loading || !accountByMint.get(QUOTE_MINT.toBase58()) ? (
-                      <Spin indicator={<LoadingOutlined />} />
+                      <Spin size="large" indicator={<LoadingOutlined />} />
                     ) : auctionView.isInstantSale ? (
                       auctionView.myBidderPot ||
                       !isAuctionManagerAuthorityNotWalletOwner ? (

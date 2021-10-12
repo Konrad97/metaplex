@@ -1087,7 +1087,7 @@ const LaunchStep = (props: {
           {cost ? (
             <AmountLabel title="Cost to Create" amount={cost.toFixed(5)} />
           ) : (
-            <Spin indicator={<LoadingOutlined />} />
+            <Spin size="large" indicator={<LoadingOutlined />} />
           )}
         </Col>
       </Row>

@@ -65,7 +65,12 @@ const DefaultActions = ({ vertical = false }: { vertical?: boolean }) => {
       </Link>
       <a href="https://digitaleyes.market/collections/SOLdreams" target="_blank">
             <Button className="app-btn">
-              Marketplace
+              DigitalEyes
+            </Button>
+          </a>
+          <a href="https://magiceden.io/marketplace?collection_symbol=soldreams" target="_blank">
+            <Button className="app-btn">
+              MagicEden
             </Button>
           </a>
       {/*<Link to={`/artists`}>
@@ -103,7 +108,14 @@ const MetaplexMenu = () => {
               <Menu.Item>
                   <a href="https://digitaleyes.market/collections/SOLdreams" target="_blank">
                 <Button className="app-btn">
-                  Marketplace
+                  DigitalEyes
+                </Button>
+              </a>
+              </Menu.Item>
+              <Menu.Item>
+                  <a href="https://magiceden.io/marketplace?collection_symbol=soldreams" target="_blank">
+                <Button className="app-btn">
+                  MagicEden
                 </Button>
               </a>
               </Menu.Item>

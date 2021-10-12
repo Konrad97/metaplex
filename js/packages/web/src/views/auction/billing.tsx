@@ -55,7 +55,7 @@ export const BillingView = () => {
       mint={mint}
     />
   ) : (
-    <Spin indicator={<LoadingOutlined />} />
+    <Spin size="large" indicator={<LoadingOutlined />} />
   );
 };
 

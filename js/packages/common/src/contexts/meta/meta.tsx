@@ -136,8 +136,8 @@ export function MetaProvider({ children = null as any }) {
       {isLoading ? (
         <div className="app--loading">
           <Space direction="vertical" size="middle">
-            {/*<img src={storefront.theme.logo} className="app--loading-logo" />*/}
-            <Spin indicator={<LoadingOutlined />} />
+            <img src={"/apple-touch-icon.png"} className="app--loading-logo" />
+            <Spin size="large" indicator={<LoadingOutlined />} />
           </Space>
         </div>
       ) : children}

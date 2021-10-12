@@ -265,8 +265,6 @@ export class AuctionData {
 
   public ended() {
     const now = moment().unix();
-    console.log("Mint: " + JSON.stringify(this.authority))
-    console.log(`Ended at: ${this.endedAt?.toNumber()},\n Auction gap: ${this.auctionGap}, \n Last Bid: ${this.lastBid}, \n Now: ${now}`)
 
     if (!this.endedAt) return false;
 

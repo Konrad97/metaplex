@@ -1755,7 +1755,7 @@ const ReviewStep = (props: {
           {cost ? (
             <AmountLabel title="Cost to Create" amount={cost} />
           ) : (
-            <Spin indicator={<LoadingOutlined />} />
+            <Spin size="large" indicator={<LoadingOutlined />} />
           )}
         </Col>
       </Row>
